@@ -1,1 +1,1 @@
-Website deployed at www.some-places-some-spaces.netlify.app
+Website deployed at some-places-some-spaces.netlify.app
