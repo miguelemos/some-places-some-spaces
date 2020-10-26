@@ -1,9 +1,10 @@
 // -1 because array members start from 0.
-var NumberOfImages = 11 - 1;
+var NumberOfImages = 11;
 
 var img = new Array(NumberOfImages);
 
-img[1] = "Photos/2.jpg";
+img[0] = "Photos/1.jpg";
+img[1] = "Photos/2.jpg"
 img[2] = "Photos/3.jpg";
 img[3] = "Photos/4.jpg";
 img[4] = "Photos/5.jpg";
