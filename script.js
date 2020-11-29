@@ -1,42 +1,72 @@
-// -1 because array members start from 0.
-var NumberOfImages = 11;
+var slideIndex = 1;
 
-var img = new Array(NumberOfImages);
+var myTimer;
 
-img[0] = "Photos/1.jpg";
-img[1] = "Photos/2.jpg"
-img[2] = "Photos/3.jpg";
-img[3] = "Photos/4.jpg";
-img[4] = "Photos/5.jpg";
-img[5] = "Photos/6.jpg";
-img[6] = "Photos/7.jpg";
-img[7] = "Photos/8.jpg";
-img[8] = "Photos/9.jpg";
-img[9] = "Photos/10.jpg";
-img[10] = "Photos/12.jpg";
-img[11] = "Photos/13.jpg";
+var slideshowContainer;
 
-// Array key of current image.
-var imgNumber = 0;
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    // myTimer = setInterval(function(){plusSlides(1)}, 4000);
 
-function NextImage() {
-    // Stop moving forward when we are out of images.
-    if (imgNumber < NumberOfImages) {
-        imgNumber++;
-        document.images["SwitchingImage"].src = img[imgNumber];
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n) {
+    clearInterval(myTimer);
+    if (n < 0) {
+        showSlides(slideIndex -= 1);
+    } else {
+        showSlides(slideIndex += 1);
     }
 }
 
-function PreviousImage() {
-    // Stop moving backward when we are out of images.
-    if (imgNumber != 0) {
-        imgNumber--;
-        document.images["SwitchingImage"].src = img[imgNumber];
+    //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    /*
+    if (n === -1){
+        myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+    } else {
+        myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
     }
 }
 
+     */
 
-function DisplayImage(id) {
-    imgNumber = id;
-    document.images["VCRImage"].src = "full_images/" + img[id];
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+    // clearInterval(myTimer);
+    // myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+    // clearInterval(myTimer);
+}
+
+resume = () =>{
+    // clearInterval(myTimer);
+    // myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }
