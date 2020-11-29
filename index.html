@@ -1,9 +1,12 @@
-<html>
-    
+<!DOCTYPE html>
+
+<html lang="en">
+
 <!--Responsive website-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
+    <meta charset="UTF-8">
     <title>Some Places, Some Spaces</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <link rel="icon" type="image/png" href="Photos/logo.jpg">
@@ -14,15 +17,88 @@
 
 <h5>SOME PLACES, SOME SPACES</h5>
 
-<div class="nav-arrow" onclick="location.href='javascript:PreviousImage()';" style="cursor: pointer;"></div>
-<div class="nav-arrow" onclick="location.href='javascript:NextImage()';" style="cursor: pointer;"></div>
+<!-- 12 pictures -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src='Photos/1.jpg' alt="Hi, sir"/>
+    </div>
 
-<img src="Photos/1.jpg" alt="Hi, sir" class="center" name="SwitchingImage"/>
+    <div class="mySlides fade">
+        <img src='Photos/2.jpg' alt="Hi, sir"/>
+    </div>
 
+    <div class="mySlides fade">
+        <img src='Photos/3.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/4.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/5.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/6.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/7.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/8.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/9.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/10.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/12.jpg' alt="Hi, sir"/>
+    </div>
+
+    <div class="mySlides fade">
+        <img src='Photos/13.jpg' alt="Hi, sir"/>
+    </div>
+
+    <!-- Arrows (left/right) -->
+    <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+    <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+
+</div>
+
+<!-- Grey Dots for the 12 pictures -->
+<div style='text-align: center;'>
+    <span class="dot" onclick='currentSlide(1)'></span>
+    <span class="dot" onclick='currentSlide(2)'></span>
+    <span class="dot" onclick='currentSlide(3)'></span>
+    <span class="dot" onclick='currentSlide(4)'></span>
+    <span class="dot" onclick='currentSlide(5)'></span>
+    <span class="dot" onclick='currentSlide(6)'></span>
+    <span class="dot" onclick='currentSlide(7)'></span>
+    <span class="dot" onclick='currentSlide(8)'></span>
+    <span class="dot" onclick='currentSlide(9)'></span>
+    <span class="dot" onclick='currentSlide(10)'></span>
+    <span class="dot" onclick='currentSlide(11)'></span>
+    <span class="dot" onclick='currentSlide(12)'></span>
+</div>
+
+
+<!-- Audio -->
 <audio loop autoplay="autoplay" controls>
     <source src="Audio/Place.mp3" type="audio/mpeg">
 </audio>
 
+
+<footer>
+    <p>Some photos by Miguel with music by himself & some friends<br>
+</footer>
 
 </body>
 
