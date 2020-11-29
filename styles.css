@@ -8,39 +8,126 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0%;
-    width: 73%;
+    width: 78%;
 }
 
 
 h5 {
     margin-top: 2%;
-    line-height: 2;
+    line-height: 1;
 }
 
-a {
-    color: blue;
+p {
+    font-family: Helvetica, "Helvetica Neue", "Calibri", "Cambria Math", Cambria;
+    font-size: 10px;
 }
-
-
-.nav-arrow {
-    width: 40px;
-    height: 60px;
-    background: #333;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-}
-
-.nav-arrow:nth-of-type(2) {
-    left: auto;
-    right: 0;
-}
-
 
 audio {
     margin-top: 3%;
-    height:100px;
-    width:300px;
+    height: 100px;
+    width: 300px;
+}
+
+
+.slideshow-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    width: 78%;
+    /* position: relative; */
+    /* margin: auto; */
+}
+
+.mySlides {
+    display: none;
+    height: auto;
+    /* border: solid 1px black; */
+}
+
+
+/* Left arrow */
+.prev,
+.next {
+    border-left: 20px solid transparent;
+    /*
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 5px solid transparent;
+     */
+    width: 20px;
+    height: 40px;
+    /* background: #333; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    cursor: pointer;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    color: slategrey;
+}
+
+/* Right arrow */
+.prev:nth-of-type(2),
+.next:nth-of-type(2) {
+    left: auto;
+    right: 10px;
+}
+
+
+/* Arrows: hover */
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+
+/*
+.prev,
+.next {
+
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+ */
+
+
+.dot {
+    cursor: pointer;
+    height: 7px;
+    width: 7px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
 }
