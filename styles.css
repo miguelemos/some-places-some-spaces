@@ -1,5 +1,5 @@
 img {
-    width: 90%;
+    width: 100%;
     height: auto;
 }
 
@@ -39,7 +39,7 @@ audio {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0%;
-    width: 75%;
+    width: 60%;
     /* position: relative; */
     /* margin: auto; */
 }
